@@ -9,9 +9,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>Document</title>
+    
+    <style>
+      @layer utilities {
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="w-full h-full bg-black">
+    <div class="w-full h-full">
       <header>
         <nav
           class="flex h-[77px] w-full max-w-[1440px] items-center justify-between mx-auto md:px-16 lg:px-24 bg-gray-100"
@@ -47,76 +64,105 @@
         </nav>
       </header>
       <!------------------- hero section ---------------------------->
-      <section
-        class="w-full max-w-[1440px] min-h-[989px] mx-auto bg-white py-12 px-12 md:px-16 lg:px-24 flex flex-col justify-center text-start gap-[48px]"
-      >
-        <div class="max-w-7xl w-full">
-          <h1
-            class="text-[15vw] lg:text-[235px] font-black leading-none text-[#44169C] tracking-tighter uppercase"
-          >
-            WORKORA
-          </h1>
-
-          <div class="mt-4 flex flex-col items-center text-center">
-            <h2
-              class="text-4xl md:text-6xl font-bold text-[#2D2B38] uppercase tracking-tight"
-            >
-              Work Your Way at Workora
-            </h2>
-
-            <p
-              class="mt-6 text-gray-500 text-lg md:text-xl max-w-2xl leading-relaxed"
-            >
-              Flexible workspaces for freelancers, teams, and businesses
-              designed for productivity, comfort, and community.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap justify-center gap-[20px]">
-          <button
-            class="bg-[#44169C] text-white rounded-lg font-semibold hover:bg-[#38006b] transition-colors cursor-pointer w-[198px] h-[62px]"
-          >
-            Explore Spaces
-          </button>
-
-          <button
-            class="w-[160px] h-[62px] border-2 border-[#4314A4] text-[#4314A4] rounded-lg flex items-center justify-center gap-2 font-semibold cursor-pointer"
-          >
-            Book a Tour
-          </button>
-        </div>
-
+      <section class="w-full">
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-8"
+          class="max-w-[1440px] mx-auto bg-white py-12 px-8 md:px-16 lg:px-24 flex flex-col justify-center text-start gap-[48px]"
         >
-          <div class="aspect-[4/5] overflow-hidden rounded-sm">
-            <img
-              src="assests/hero-img/img-1.jpg"
-              alt=""
-              class="w-full h-full object-cover"
-            />
+          <!-- Hero Heading -->
+          <div class="max-w-7xl w-full">
+            <h1
+              class="text-[15vw] lg:text-[235px] font-black leading-none text-[#44169C] tracking-tighter uppercase"
+            >
+              WORKORA
+            </h1>
+
+            <div class="mt-4 flex flex-col items-center text-center">
+              <h2
+                class="text-4xl md:text-6xl font-bold text-[#2D2B38] uppercase tracking-tight"
+              >
+                Work Your Way at Workora
+              </h2>
+
+              <p
+                class="mt-6 text-gray-500 text-lg md:text-xl max-w-2xl leading-relaxed"
+              >
+                Flexible workspaces for freelancers, teams, and businesses
+                designed for productivity, comfort, and community.
+              </p>
+            </div>
           </div>
-          <div class="aspect-[4/5] overflow-hidden rounded-sm">
-            <img
-              src="assests/hero-img/img-2.jpg"
-              alt=""
-              class="w-full h-full object-cover"
-            />
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap justify-center gap-[20px]">
+            <button
+              class="bg-[#44169C] text-white rounded-lg font-semibold hover:bg-[#38006b] transition-colors cursor-pointer w-[198px] h-[62px]"
+            >
+              Explore Spaces
+            </button>
+
+            <button
+              class="w-[160px] h-[62px] border-2 border-[#4314A4] text-[#4314A4] rounded-lg flex items-center justify-center gap-2 font-semibold cursor-pointer"
+            >
+              Book a Tour
+            </button>
           </div>
-          <div class="aspect-[4/5] overflow-hidden rounded-sm">
-            <img
-              src="assests/hero-img/img-3.jpg"
-              alt=""
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="aspect-[4/5] overflow-hidden rounded-sm">
-            <img
-              src="assests/hero-img/img-4.jpg"
-              alt=""
-              class="w-full h-full object-cover"
-            />
+
+          <!-- Continuous Scroll Images -->
+          <div class="w-full overflow-hidden mt-8">
+            <div
+              class="inline-grid grid-flow-col auto-cols-[25%] gap-6 animate-marquee"
+            >
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-1.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-2.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-3.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-4.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- Repeat for seamless scroll -->
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-1.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-2.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-3.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-4.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -203,7 +249,7 @@
           </div>
         </div>
       </section>
-      
+
       <!--------------------------Testimonial section ---------------------------------->
       <section
         class="w-full max-w-[1440px] min-h-[797px] mx-auto bg-[#F8F7F4] py-20 px-8 md:px-16 lg:px-24 flex flex-col gap-[48px]"
@@ -361,7 +407,9 @@
         </div>
       </section>
       <!----------------------------Membership section -------------------------------------------->
-      <section class="max-w-[1440px] mx-auto bg-white py-20 px-4 md:px-12 font-sans">
+      <section
+        class="max-w-[1440px] mx-auto bg-white py-20 px-4 md:px-12 font-sans"
+      >
         <div class="max-w-4xl mx-auto text-center mb-16">
           <h2
             class="text-[#7C5CFC] text-4xl font-bold uppercase tracking-wide mb-4"
@@ -508,7 +556,7 @@
         </div>
       </section>
       <!------------------- pearks section ------------------------>
-      
+
       <section
         class="bg-[#F8F7F4] py-20 px-4 md:px-12 flex flex-col items-center justify-center min-h-[600px] w-full max-w-[1440px] mx-auto"
       >
