@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>Document</title>
-    
+
     <style>
       @layer utilities {
         @keyframes marquee {
@@ -29,9 +29,9 @@
   </head>
   <body>
     <div class="w-full h-full">
-      <header>
+      <header class="bg-gray-100">
         <nav
-          class="flex h-[77px] w-full max-w-[1440px] items-center justify-between mx-auto md:px-16 lg:px-24 bg-gray-100"
+          class="flex h-[77px] w-full max-w-[1440px] items-center justify-between mx-auto px-6 md:px-16 lg:px-24"
         >
           <div class="flex items-center">
             <span class="text-2xl font-bold tracking-tight text-[#6332BC]"
@@ -40,28 +40,73 @@
           </div>
 
           <ul
-            class="items-center gap-8 text-sm font-medium text-gray-600 lg:flex hover:text-[#6332BC]"
+            class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-600"
           >
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Workspaces</a></li>
-            <li><a href="#">Membership</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Favorites</a></li>
+            <li>
+              <a href="#" class="hover:text-[#6332BC] transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#6332BC] transition-colors"
+                >Workspaces</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#6332BC] transition-colors"
+                >Membership</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#6332BC] transition-colors"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#6332BC] transition-colors"
+                >Favorites</a
+              >
+            </li>
           </ul>
 
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 md:gap-4">
             <button
-              class="rounded-sm border border-[#6332BC] px-5 py-2 text-sm font-semibold text-[#6332BC] hover:bg-purple-50 cursor-pointer w-[113px] h-[37px]"
+              class="rounded-sm border border-[#6332BC] px-5 py-2 text-sm font-semibold text-[#6332BC] hover:bg-purple-50 cursor-pointer"
             >
               Contact Us
             </button>
             <button
-              class="rounded-sm bg-[#4A1D96] text-sm font-semibold text-white hover:bg-[#3b1779] cursor-pointer w-[83px] h-[37px]"
+              class="rounded-sm bg-[#4A1D96] px-5 py-2 text-sm font-semibold text-white hover:bg-[#3b1779] cursor-pointer"
             >
               Log In
             </button>
           </div>
         </nav>
+
+        <div
+          class="hidden lg:hidden bg-white border-b border-gray-200 px-6 py-4"
+        >
+          <ul class="flex flex-col gap-4 text-sm font-medium text-gray-600">
+            <li><a href="#" class="block hover:text-[#6332BC]">Home</a></li>
+            <li>
+              <a href="#" class="block hover:text-[#6332BC]">Workspaces</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-[#6332BC]">Membership</a>
+            </li>
+            <li><a href="#" class="block hover:text-[#6332BC]">Blog</a></li>
+            <li>
+              <a href="#" class="block hover:text-[#6332BC]">Favorites</a>
+            </li>
+            <li class="pt-2 sm:hidden">
+              <button
+                class="w-full text-left py-2 text-[#6332BC] font-semibold"
+              >
+                Contact Us
+              </button>
+            </li>
+          </ul>
+        </div>
       </header>
       <!------------------- hero section ---------------------------->
       <section class="w-full">
@@ -408,147 +453,218 @@
       </section>
       <!----------------------------Membership section -------------------------------------------->
       <section
-        class="max-w-[1440px] mx-auto bg-white py-20 px-4 md:px-12 font-sans"
+        class="max-w-[1440px] mx-auto bg-white py-12 md:py-20 px-6 md:px-12 font-sans overflow-hidden"
       >
-        <div class="max-w-4xl mx-auto text-center mb-16">
+        <div class="max-w-4xl mx-auto text-center mb-12 md:mb-16">
           <h2
-            class="text-[#7C5CFC] text-4xl font-bold uppercase tracking-wide mb-4"
+            class="text-[#7C5CFC] text-2xl md:text-4xl font-bold uppercase tracking-wide mb-4"
           >
             Membership
           </h2>
-          <h3 class="text-gray-900 text-3xl font-extrabold mb-6">
+          <h3 class="text-gray-900 text-2xl md:text-3xl font-extrabold mb-6">
             Join the Workora Community
           </h3>
-          <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p
+            class="text-gray-600 leading-relaxed max-w-2xl mx-auto text-sm md:text-base"
+          >
             At Workora, we believe one size doesn't fit all. That's why our
             memberships are designed for flexibility whether you're just getting
-            started or leading a growing team. Enjoy full access to our spaces,
-            community events, and premium amenities tailored to your work style.
+            started or leading a growing team.
           </p>
         </div>
 
         <div
-          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch"
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
         >
-          <div class="rounded-lg p-8 flex flex-col bg-[#F8F7F4]">
-            <h4 class="text-[#7C4DFF] text-2xl font-bold mb-8">Gold</h4>
-            <div class="mb-8">
-              <span class="text-xl font-bold text-gray-800">ETB 20,000</span>
-              <span class="text-gray-500"> / month</span>
+          <div
+            class="group rounded-2xl p-8 flex flex-col bg-[#F8F7F4] hover:bg-[#4A1FB8] hover:scale-[1.02] transition-all duration-300 cursor-default border border-transparent hover:shadow-2xl cursor-pointer"
+          >
+            <h4
+              class="text-[#7C4DFF] group-hover:text-white text-2xl font-bold mb-8 transition-colors"
+            >
+              Gold
+            </h4>
+            <div class="mb-8 group-hover:text-white transition-colors">
+              <span class="text-3xl font-bold">ETB 20,000</span>
+              <span class="text-gray-500 group-hover:text-purple-200">
+                / month</span
+              >
             </div>
-            <ul class="space-y-4 mb-10 flex-grow text-gray-700">
+
+            <ul
+              class="space-y-4 mb-10 flex-grow text-gray-700 group-hover:text-white transition-colors"
+            >
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Private Office Access
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Private Office Access
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> 60 Hours Meeting Room Hours
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                60 Hours Meeting Room
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> 2 Coffee & Water/day
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                2 Coffee & Water/day
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Printing (Unlimited)
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Printing (Unlimited)
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Locker & Storage
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Locker & Storage
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Free Event Access
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Free Event Access
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> 2 Free Guest Passes/month
-              </li>
-              <li class="flex items-center">
-                <span class="mr-3">✓</span> High-Speed Wi-Fi
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                High-Speed Wi-Fi
               </li>
             </ul>
+
             <button
-              class="w-full bg-[#4A1FB8] text-white py-4 rounded-lg font-bold hover:bg-[#3b1894] transition-colors"
+              class="w-full bg-[#4A1FB8] group-hover:bg-white group-hover:text-[#4A1FB8] text-white py-4 rounded-lg font-bold transition-all cursor-pointer"
             >
               Book Now
             </button>
           </div>
 
           <div
-            class="bg-[#F8F7F4] rounded-xl p-8 flex flex-col text-black relative"
+            class="group relative rounded-2xl p-8 flex flex-col bg-[#F8F7F4] hover:bg-[#4A1FB8] hover:scale-[1.02] transition-all duration-300 cursor-default border border-transparent hover:shadow-2xl cursor-pointer"
           >
             <div
-              class="absolute right-4 bg-black/20 text-xs font-semibold px-3 py-1 text-black rounded-sm border border-white/30"
+              class="absolute top-4 right-4 bg-[#4A1FB8] group-hover:bg-white text-white group-hover:text-[#4A1FB8] text-[10px] uppercase font-bold px-3 py-1 rounded-full transition-colors "
             >
               Most Popular
             </div>
-            <h4 class="text-[#7C4DFF] text-2xl font-bold mb-8">Silver</h4>
-            <div class="mb-8">
-              <span class="text-xl font-bold">ETB 8,500</span>
-              <span class="opacity-80"> / month</span>
+            <h4
+              class="text-[#7C4DFF] group-hover:text-white text-2xl font-bold mb-8 transition-colors"
+            >
+              Silver
+            </h4>
+            <div class="mb-8 group-hover:text-white transition-colors">
+              <span class="text-3xl font-bold">ETB 8,500</span>
+              <span class="text-gray-500 group-hover:text-purple-200">
+                / month</span
+              >
             </div>
-            <ul class="space-y-4 mb-10 flex-grow">
+
+            <ul
+              class="space-y-4 mb-10 flex-grow text-gray-700 group-hover:text-white transition-colors"
+            >
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Dedicated Desk
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Dedicated Desk
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> 20 Hours Meeting Room Access
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                20 Hours Meeting Access
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> 2 Coffees & Water /day
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                2 Coffees & Water /day
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Printing (50 pages)
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Printing (50 pages)
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Locker & Storage
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                1 Guest Pass/month
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> 50% Off Event Access
-              </li>
-              <li class="flex items-center">
-                <span class="mr-3">✓</span> 1 Free Guest Pass/month
-              </li>
-              <li class="flex items-center">
-                <span class="mr-3">✓</span> High-Speed Wi-Fi
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                High-Speed Wi-Fi
               </li>
             </ul>
+
             <button
-              class="w-full bg-[#4A1FB8] text-white py-4 rounded-lg font-bold hover:bg-[#3b1894] transition-colors"
+              class="w-full bg-[#4A1FB8] group-hover:bg-white group-hover:text-[#4A1FB8] text-white py-4 rounded-lg font-bold transition-all cursor-pointer"
             >
               Book Now
             </button>
           </div>
 
-          <div class="bg-[#F8F7F4] rounded-lg p-8 flex flex-col">
-            <h4 class="text-[#7C5CFC] text-2xl font-bold mb-8">Bronze</h4>
-            <div class="mb-8">
-              <span class="text-xl font-bold text-gray-800">ETB 7,000</span>
-              <span class="text-gray-500"> / month</span>
+          <div
+            class="group rounded-2xl p-8 flex flex-col bg-[#F8F7F4] hover:bg-[#4A1FB8] hover:scale-[1.02] transition-all duration-300 cursor-default border border-transparent hover:shadow-2xl md:col-span-2 lg:col-span-1 cursor-pointer"
+          >
+            <h4
+              class="text-[#7C4DFF] group-hover:text-white text-2xl font-bold mb-8 transition-colors"
+            >
+              Bronze
+            </h4>
+            <div class="mb-8 group-hover:text-white transition-colors">
+              <span class="text-3xl font-bold">ETB 7,000</span>
+              <span class="text-gray-500 group-hover:text-purple-200">
+                / month</span
+              >
             </div>
-            <ul class="space-y-4 mb-10 flex-grow text-gray-700">
+
+            <ul
+              class="space-y-4 mb-10 flex-grow text-gray-700 group-hover:text-white transition-colors"
+            >
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Shared Desk Access
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Shared Desk Access
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Bookable Meeting Rooms
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Bookable Meeting Rooms
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> 1 Coffee & Water/day
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                1 Coffee & Water/day
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Printing (10 pages/day)
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                Locker & Storage
               </li>
               <li class="flex items-center">
-                <span class="mr-3">✓</span> Locker & Storage
-              </li>
-              <li class="flex items-center">
-                <span class="mr-3">✓</span> 10% Off Event Access
-              </li>
-              <li class="flex items-center">
-                <span class="mr-3">✓</span> 1 Free Guest Passes/month
-              </li>
-              <li class="flex items-center">
-                <span class="mr-3">✓</span> High-Speed Wi-Fi
+                <span class="mr-3 text-[#7C4DFF] group-hover:text-white"
+                  >✓</span
+                >
+                High-Speed Wi-Fi
               </li>
             </ul>
+
             <button
-              class="w-full bg-[#4A1FB8] text-white py-4 rounded-lg font-bold hover:bg-[#3b1894] transition-colors"
+              class="w-full bg-[#4A1FB8] group-hover:bg-white group-hover:text-[#4A1FB8] text-white py-4 rounded-lg font-bold transition-all cursor-pointer"
             >
               Book Now
             </button>
@@ -581,7 +697,7 @@
         <div class="w-full max-w-7xl overflow-x-auto no-scrollbar">
           <div class="flex flex-nowrap md:justify-center gap-6 pb-8">
             <div
-              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center"
+              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center  hover:bg-[#4A1FB8] hover:scale-[1.02] cursor-pointer"
             >
               <div
                 class="bg-[#E5DEFF] w-16 h-16 flex items-center justify-center rounded-xl mb-6"
@@ -594,7 +710,7 @@
             </div>
 
             <div
-              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center"
+              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center  hover:bg-[#4A1FB8] hover:scale-[1.02] cursor-pointer "
             >
               <div
                 class="bg-[#E5DEFF] w-16 h-16 flex items-center justify-center rounded-xl mb-6"
@@ -607,7 +723,7 @@
             </div>
 
             <div
-              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center"
+              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center  hover:bg-[#4A1FB8] hover:scale-[1.02] cursor-pointer"
             >
               <div
                 class="bg-[#E5DEFF] w-16 h-16 flex items-center justify-center rounded-xl mb-6"
@@ -622,7 +738,7 @@
             </div>
 
             <div
-              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center"
+              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center  hover:bg-[#4A1FB8] hover:scale-[1.02] cursor-pointer"
             >
               <div
                 class="bg-[#E5DEFF] w-16 h-16 flex items-center justify-center rounded-xl mb-6"
@@ -635,14 +751,14 @@
             </div>
 
             <div
-              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center"
+              class="min-w-[180px] bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center  hover:bg-[#4A1FB8] hover:scale-[1.02] cursor-pointer "
             >
               <div
-                class="bg-[#E5DEFF] w-16 h-16 flex items-center justify-center rounded-xl mb-6"
+                class="bg-[#E5DEFF] w-16 h-16 flex items-center justify-center rounded-xl mb-6 "
               >
                 <i class="fa-solid fa-clock text-[#7C5CFC] text-3xl"></i>
               </div>
-              <span class="text-[#2D2D2D] font-bold text-lg leading-tight"
+              <span class="text-[#2D2D2D] font-bold text-lg leading-tight "
                 >24/7<br />Access</span
               >
             </div>
