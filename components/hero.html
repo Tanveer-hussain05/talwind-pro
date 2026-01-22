@@ -1,51 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Document</title>
+
+ <style>
+      @layer utilities {
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .marquee-track {
+          animation: marquee 20s linear infinite;
+        }
+
+        .slide {
+          flex-shrink: 0;
+          width: 25%; 
+        }
+
+        
+        @media (max-width: 640px) {
+          .slide {
+            width: 80%;
+          }
+        }
+
+        
+        @media (min-width: 641px) and (max-width: 1023px) {
+          .slide {
+            width: 50%;
+          }
+        }
+      }
+    </style>
 </head>
+
 <body>
-    <section class="w-full max-w-[1440px] min-h-[989px] mx-auto bg-white py-20 px-8 md:px-16 lg:px-24 flex flex-col items-center justify-center text-center gap-[48px]">
-  
-  <div class="space-y-6 max-w-4xl">
-    <h1 class="text-[120px] md:text-[180px] font-black leading-none tracking-tighter text-[#7C4DFF] uppercase">
-      WORKORA
-    </h1>
-    
-    <h2 class="text-4xl md:text-5xl font-extrabold text-[#2D2B38] uppercase tracking-tight">
-      Work Your Way at Workora
-    </h2>
-    
-    <p class="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-      Flexible workspaces for freelancers, teams, and businesses designed for productivity, comfort, and community.
-    </p>
-  </div>
 
-  <div class="flex flex-wrap justify-center gap-4">
-    <button class="bg-[#4A1D96] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#3b1779] transition-all">
-      Explore Spaces
-    </button>
-    <button class="border-2 border-[#D1D5DB] text-[#4A1D96] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all">
-      Book a Tour
-    </button>
-  </div>
+ <section class="w-full">
+        <div
+          class="max-w-[1440px] mx-auto bg-white py-12 px-8 md:px-16 lg:px-24 flex flex-col justify-center text-start gap-[48px]"
+        >
+          <!-- Hero Heading -->
+          <div class="max-w-7xl w-full">
+            <img src="assests/nav-img/WORKORA.png" alt="" />
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-8">
-    <div class="aspect-[4/5] overflow-hidden rounded-sm">
-      <img src="assests/hero-img/img-1.jpg" alt="" class="w-full h-full object-cover">
-    </div>
-    <div class="aspect-[4/5] overflow-hidden rounded-sm">
-      <img src="assests/hero-img/img-2.jpg" alt="" class="w-full h-full object-cover">
-    </div>
-    <div class="aspect-[4/5] overflow-hidden rounded-sm">
-      <img src="assests/hero-img/img-3.jpg" alt="Person at desk" class="w-full h-full object-cover">
-    </div>
-    <div class="aspect-[4/5] overflow-hidden rounded-sm">
-      <img src="assests/hero-img/img-4.jpg" alt="Laptop on wooden table" class="w-full h-full object-cover">
-    </div>
-  </div>
-</section>
+            <div class="mt-4 flex flex-col items-center text-center">
+              <h2
+                class="text-4xl md:text-6xl font-bold text-[#2D2B38] uppercase tracking-tight"
+              >
+                Work Your Way at Workora
+              </h2>
+
+              <p
+                class="mt-6 text-gray-500 text-lg md:text-xl max-w-2xl leading-relaxed"
+              >
+                Flexible workspaces for freelancers, teams, and businesses
+                designed for productivity, comfort, and community.
+              </p>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap justify-center gap-[20px]">
+            <button
+              class="bg-[#ffff] text-[#4314A4] rounded-lg font-semibold hover:bg-[#7C4DFF] transition-colors cursor-pointer w-[198px] h-[62px] border-2 border-[#7C4DFF] hover:text-white flex items-center justify-center gap-2"
+            >
+              Explore Spaces
+            </button>
+
+            <button
+              class="w-[160px] h-[62px] border-2 border-[#7C4DFF] text-[#4314A4] rounded-lg flex items-center justify-center gap-2 font-semibold cursor-pointer hover:bg-[#7C4DFF] hover:text-white transition-colors"
+            >
+              Book a Tour
+            </button>
+          </div>
+
+          <!-- Continuous Scroll Images -->
+          <div class="w-full overflow-hidden mt-8">
+            <div class="marquee-track inline-flex gap-6">
+             
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-1.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-2.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-3.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-4.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- DUPLICATE FOR SEAMLESS LOOP -->
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-1.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-2.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-3.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="assests/hero-img/img-4.jpg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,8 +21,21 @@
           }
         }
 
-        .animate-marquee {
+        .marquee-track {
+          display: flex;
+          width: max-content;
+
           animation: marquee 20s linear infinite;
+          will-change: transform;
+        }
+
+        .slide {
+          flex-shrink: 0;
+          width: 250px;
+        }
+
+        .slide {
+          width: 300px;
         }
       }
     </style>
@@ -31,10 +44,10 @@
     <div class="w-full h-full">
       <header class="bg-gray-100">
         <nav
-          class="flex h-[77px] w-full max-w-[1440px] items-center justify-between mx-auto px-6 md:px-16 lg:px-24"
+          class="flex h-[77px] w-full max-w-[1440px] items-center justify-between mx-auto px-6 md:px-16 lg:px-24 relative"
         >
           <div class="flex items-center">
-            <img src="assests/nav-img/Frame 44.png" alt="" />
+            <img src="assests/nav-img/Frame 44.png" alt="Logo" />
           </div>
 
           <ul
@@ -69,7 +82,7 @@
 
           <div class="flex items-center gap-2 md:gap-4">
             <button
-              class="rounded-sm border border-[#7C4DFF] px-5 py-2 text-sm font-semibold text-[#4A1D96] hover:bg-[#7C4DFF] hover:text-white cursor-pointer"
+              class="hidden sm:block rounded-sm border border-[#7C4DFF] px-5 py-2 text-sm font-semibold text-[#4A1D96] hover:bg-[#7C4DFF] hover:text-white cursor-pointer"
             >
               Contact Us
             </button>
@@ -78,7 +91,34 @@
             >
               Log In
             </button>
+
+            <button id="menu-btn" class="lg:hidden block focus:outline-none">
+              <svg
+                class="w-8 h-8 text-[#4A1D96]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
           </div>
+
+          <ul
+            id="mobile-menu"
+            class="hidden absolute top-[77px] left-0 w-full bg-white border-b border-gray-200 flex-col items-center gap-4 py-6 text-sm font-medium text-gray-600 lg:hidden shadow-lg z-50"
+          >
+            <li><a href="#" class="hover:text-[#6332BC]">Home</a></li>
+            <li><a href="#" class="hover:text-[#6332BC]">Workspaces</a></li>
+            <li><a href="#" class="hover:text-[#6332BC]">Membership</a></li>
+            <li><a href="#" class="hover:text-[#6332BC]">Blog</a></li>
+            <li><a href="#" class="hover:text-[#6332BC]">Favorites</a></li>
+          </ul>
         </nav>
       </header>
       <!------------------- hero section ---------------------------->
@@ -121,56 +161,52 @@
             </button>
           </div>
 
-          <!-- Continuous Scroll Images -->
           <div class="w-full overflow-hidden mt-8">
-            <div
-              class="inline-grid grid-flow-col auto-cols-[25%] gap-6 animate-marquee"
-            >
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+            <div class="marquee-track flex gap-6">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-1.jpg"
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-2.jpg"
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-3.jpg"
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-4.jpg"
                   class="w-full h-full object-cover"
                 />
               </div>
 
-              <!-- Repeat for seamless scroll -->
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-1.jpg"
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-2.jpg"
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-3.jpg"
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="aspect-[4/5] rounded-sm overflow-hidden">
+              <div class="slide aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="assests/hero-img/img-4.jpg"
                   class="w-full h-full object-cover"
@@ -270,8 +306,10 @@
       <section
         class="w-full max-w-[1440px] min-h-[797px] mx-auto bg-[#F8F7F4] py-20 px-8 md:px-16 lg:px-24 flex flex-col gap-[48px]"
       >
-        <div class="flex flex-col md:flex-row justify-between items-end">
-          <div class="">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6"
+        >
+          <div>
             <h2
               class="text-5xl font-black text-[#7C4DFF] uppercase tracking-tight mb-4"
             >
@@ -282,9 +320,10 @@
               space to match your energy.
             </p>
           </div>
-          <div class="pb-6">
+
+          <div class="pb-8">
             <button
-              class="border-2 border-[#7C4DFF] text-[#7C4DFF] px-8 py-4 rounded-xl font-bold hover:bg-[#7C4DFF] hover:text-white cursor-pointer"
+              class="border-2 border-[#7C4DFF] text-[#7C4DFF] px-8 py-3 rounded-xl font-bold mx-auto md:ml-auto hover:bg-[#7C4DFF] hover:text-white transition-all"
             >
               View All Spaces
             </button>
@@ -292,7 +331,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-2xl p-6 shadow-sm flex flex-col gap-5">
+          <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img
                 src="assests/blog-img/img-3.jpg"
@@ -328,14 +367,14 @@
                 <p class="text-gray-400 text-sm">Daily</p>
               </div>
               <button
-                class="bg-[#ffff] border-2 border-[#7C4DFF] text-[#7C4DFF] px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#7C4DFF] hover:text-[white] cursor-pointer"
+                class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
               >
-                Book Now
+                Book Now <span>↗</span>
               </button>
             </div>
           </div>
 
-          <div class="bg-white rounded-2xl p-6 shadow-sm flex flex-col gap-5">
+          <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img
                 src="assests/blog-img/img-2.jpg"
@@ -371,14 +410,14 @@
                 <p class="text-gray-400 text-sm">Daily</p>
               </div>
               <button
-                class="bg-[#ffff] border-2 border-[#7C4DFF] text-[#7C4DFF] px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#7C4DFF] hover:text-[white] cursor-pointer"
+                class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
               >
-                Book Now
+                Book Now <span>↗</span>
               </button>
             </div>
           </div>
 
-          <div class="bg-white rounded-2xl p-6 shadow-sm flex flex-col gap-5">
+          <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img
                 src="assests/blog-img/img-1.jpg"
@@ -414,9 +453,9 @@
                 <p class="text-gray-400 text-sm">Daily</p>
               </div>
               <button
-                class="bg-[#ffff] border-2 border-[#7C4DFF] text-[#7C4DFF] px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#7C4DFF] hover:text-[white] cursor-pointer"
+                class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
               >
-                Book Now
+                Book Now <span>↗</span>
               </button>
             </div>
           </div>
@@ -961,7 +1000,7 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8"
         >
           <div
-            class="flex flex-col gap-4 text-center sm:text-left items-center sm:items-start"
+            class="flex flex-col gap-4 text-center sm:text-left items-center "
           >
             <h2 class="text-4xl font-bold tracking-tight text-[#7C4DFF]">
               WORKORA
