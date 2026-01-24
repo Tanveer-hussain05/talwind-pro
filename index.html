@@ -42,12 +42,14 @@
   </head>
   <body>
     <div class="w-full h-full">
-      <header class="bg-gray-100">
+      <header class="bg-gray-100 relative">
         <nav
-          class="flex h-[77px] w-full max-w-[1440px] items-center justify-between mx-auto px-6 md:px-16 lg:px-24 relative"
+          class="flex h-[77px] w-full max-w-[1440px] items-center justify-between mx-auto px-6 md:px-16 lg:px-24"
         >
           <div class="flex items-center">
-            <img src="assests/nav-img/Frame 44.png" alt="Logo" />
+            <span class="text-2xl font-bold tracking-tight text-[#7C4DFF]"
+              >WORKORA</span
+            >
           </div>
 
           <ul
@@ -80,51 +82,88 @@
             </li>
           </ul>
 
-          <div class="flex items-center gap-2 md:gap-4">
-            <button
-              class="hidden sm:block rounded-sm border border-[#7C4DFF] px-5 py-2 text-sm font-semibold text-[#4A1D96] hover:bg-[#7C4DFF] hover:text-white cursor-pointer"
-            >
-              Contact Us
-            </button>
-            <button
-              class="rounded-sm px-5 py-2 text-sm font-semibold text-[#4A1D96] hover:bg-[#7C4DFF] cursor-pointer border border-[#7C4DFF] hover:text-white"
-            >
-              Log In
-            </button>
-
-            <button id="menu-btn" class="lg:hidden block focus:outline-none">
-              <svg
-                class="w-8 h-8 text-[#4A1D96]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          <div class="flex items-center gap-4">
+            <div class="hidden lg:flex items-center gap-4">
+              <button
+                class="rounded-sm border border-[#7C4DFF] px-5 py-2 text-sm font-semibold hover:bg-[#7C4DFF] hover:text-white cursor-pointer transition-all"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
+                Contact Us
+              </button>
+              <button
+                class="rounded-sm border border-[#7C4DFF] px-5 py-2 text-sm font-semibold hover:bg-[#7C4DFF] hover:text-white cursor-pointer transition-all"
+              >
+                Log In
+              </button>
+            </div>
+
+            <button
+              id="menu-btn"
+              class="lg:hidden text-2xl text-[#6332BC] cursor-pointer p-2"
+            >
+              <i class="fa-solid fa-bars"></i>
             </button>
           </div>
-
-          <ul
-            id="mobile-menu"
-            class="hidden absolute top-[77px] left-0 w-full bg-white border-b border-gray-200 flex-col items-center gap-4 py-6 text-sm font-medium text-gray-600 lg:hidden shadow-lg z-50"
-          >
-            <li><a href="#" class="hover:text-[#6332BC]">Home</a></li>
-            <li><a href="#" class="hover:text-[#6332BC]">Workspaces</a></li>
-            <li><a href="#" class="hover:text-[#6332BC]">Membership</a></li>
-            <li><a href="#" class="hover:text-[#6332BC]">Blog</a></li>
-            <li><a href="#" class="hover:text-[#6332BC]">Favorites</a></li>
-          </ul>
         </nav>
+
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden bg-white border-b border-gray-200 absolute w-full left-0 z-50 shadow-lg"
+        >
+          <ul class="flex flex-col p-6 gap-4 text-sm font-medium text-gray-600">
+            <li>
+              <a
+                href="#"
+                class="block py-2 hover:text-[#7C4DFF] border-b border-gray-50"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 hover:text-[#7C4DFF] border-b border-gray-50"
+                >Workspaces</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 hover:text-[#7C4DFF] border-b border-gray-50"
+                >Membership</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 hover:text-[#7C4DFF] border-b border-gray-50"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 hover:text-[#7C4DFF] border-b border-gray-50"
+                >Favorites</a
+              >
+            </li>
+            <div class="flex flex-col gap-3 pt-4">
+              <button
+                class="w-full rounded-sm border border-[#7C4DFF] py-3 text-sm font-semibold hover:bg-[#7C4DFF] hover:text-white transition-all cursor-pointer"
+              >
+                Contact Us
+              </button>
+              <button
+                class="w-full rounded-sm border border-[#7C4DFF] py-3 text-sm font-semibold hover:bg-[#7C4DFF] hover:text-white transition-all cursor-pointer"
+              >
+                Log In
+              </button>
+            </div>
+          </ul>
+        </div>
       </header>
       <!------------------- hero section ---------------------------->
       <section class="w-full">
         <div
-          class="max-w-[1440px] mx-auto bg-white py-12 px-8 md:px-16 lg:px-24 flex flex-col justify-center text-start gap-[48px]"
+          class="w-full max-w-[1440px] mx-auto bg-white py-12 px-8 md:px-16 lg:px-24 flex flex-col justify-center text-start gap-[48px]"
         >
           <!-- Hero Heading -->
           <div class="max-w-7xl w-full">
@@ -217,246 +256,255 @@
         </div>
       </section>
       <!-------------------------- blog section ------------------------------------------>
-      <section
-        class="w-full max-w-[1440px] min-h-[10px] mx-auto bg-[#7C4DFF] text-white py-20 lg:px-24 flex flex-col gap-[48px] px-8 md:px-16"
-      >
+      <section class="w-full bg-[#7C4DFF]">
         <div
-          class="flex justify-between md:items-center flex-col md:flex-row gap-6"
+          class="w-full max-w-[1440px] min-h-[10px] mx-auto text-white py-20 lg:px-24 flex flex-col gap-[48px] px-8 md:px-16"
         >
-          <div class="max-w-xl">
-            <h2
-              class="text-4xl md:text-5xl font-black uppercase leading-tight text-[#FFF7D1]"
-            >
-              More than just a <br />
-              desk
-            </h2>
-            <p class="text-xl md:text-2xl font-medium mt-2 opacity-90">
-              It's How You Work Best
-            </p>
-          </div>
-          <div class="max-w-md">
-            <p class="text-lg opacity-90 leading-relaxed">
-              Workora gives you the freedom, comfort, and tools toad work your
-              way whether you're flying solo, leading a team, or building the
-              next big thing.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <div class="rounded-2xl overflow-hidden h-full min-h-[500px]">
-            <img
-              src="assests/images/img.jpg"
-              alt="Person working at cafe"
-              class="w-full h-full object-cover"
-            />
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div
-              class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
-            >
-              <div class="mb-4 text-3xl">🪑</div>
-              <h3 class="text-xl font-bold mb-3">Flexible Workspaces</h3>
-              <p class="text-sm opacity-90">
-                Choose what suits your rhythm from hot desks to private offices
-                and meeting rooms. Pay for what you need, when you need it.
+          <div
+            class="flex justify-between md:items-center flex-col md:flex-row gap-6"
+          >
+            <div class="max-w-xl">
+              <h2
+                class="text-4xl md:text-5xl font-black uppercase leading-tight text-[#FFF7D1]"
+              >
+                More than just a <br />
+                desk
+              </h2>
+              <p class="text-xl md:text-2xl font-medium mt-2 opacity-90">
+                It's How You Work Best
               </p>
             </div>
-
-            <div
-              class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
-            >
-              <div class="mb-4 text-3xl">📶</div>
-              <h3 class="text-xl font-bold mb-3">
-                Amenities That Keep You Going
-              </h3>
-              <p class="text-sm opacity-90">
-                Enjoy high-speed Wi-Fi, premium coffee, lockers, printers,
-                lounges, and everything else to stay productive and relaxed.
+            <div class="max-w-md">
+              <p class="text-lg opacity-90 leading-relaxed">
+                Workora gives you the freedom, comfort, and tools toad work your
+                way whether you're flying solo, leading a team, or building the
+                next big thing.
               </p>
             </div>
+          </div>
 
-            <div
-              class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
-            >
-              <div class="mb-4 text-3xl">👥</div>
-              <h3 class="text-xl font-bold mb-3">Creative Community</h3>
-              <p class="text-sm opacity-90">
-                Surround yourself with freelancers, startups, and teams who are
-                building, sharing, and growing just like you.
-              </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <div class="rounded-2xl overflow-hidden h-full min-h-[500px]">
+              <img
+                src="assests/images/img.jpg"
+                alt="Person working at cafe"
+                class="w-full h-full object-cover"
+              />
             </div>
 
-            <div
-              class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
-            >
-              <div class="mb-4 text-3xl">🗓️</div>
-              <h3 class="text-xl font-bold mb-3">Events, Workshops & More</h3>
-              <p class="text-sm opacity-90">
-                Stay inspired with regular community events, expert-led talks,
-                networking nights, and productivity sessions.
-              </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
+              >
+                <div class="mb-4 text-3xl">🪑</div>
+                <h3 class="text-xl font-bold mb-3">Flexible Workspaces</h3>
+                <p class="text-sm opacity-90">
+                  Choose what suits your rhythm from hot desks to private
+                  offices and meeting rooms. Pay for what you need, when you
+                  need it.
+                </p>
+              </div>
+
+              <div
+                class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
+              >
+                <div class="mb-4 text-3xl">📶</div>
+                <h3 class="text-xl font-bold mb-3">
+                  Amenities That Keep You Going
+                </h3>
+                <p class="text-sm opacity-90">
+                  Enjoy high-speed Wi-Fi, premium coffee, lockers, printers,
+                  lounges, and everything else to stay productive and relaxed.
+                </p>
+              </div>
+
+              <div
+                class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
+              >
+                <div class="mb-4 text-3xl">👥</div>
+                <h3 class="text-xl font-bold mb-3">Creative Community</h3>
+                <p class="text-sm opacity-90">
+                  Surround yourself with freelancers, startups, and teams who
+                  are building, sharing, and growing just like you.
+                </p>
+              </div>
+
+              <div
+                class="bg-[#0000001A] backdrop-blur-sm p-8 rounded-xl border border-white/20 flex flex-col items-center text-center"
+              >
+                <div class="mb-4 text-3xl">🗓️</div>
+                <h3 class="text-xl font-bold mb-3">Events, Workshops & More</h3>
+                <p class="text-sm opacity-90">
+                  Stay inspired with regular community events, expert-led talks,
+                  networking nights, and productivity sessions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!--------------------------Testimonial section ---------------------------------->
-      <section
-        class="w-full max-w-[1440px] min-h-[797px] mx-auto bg-[#F8F7F4] py-20 px-8 md:px-16 lg:px-24 flex flex-col gap-[48px]"
-      >
+      <section class="w-full bg-[#F8F7F4]">
         <div
-          class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6"
+          class="w-full max-w-[1440px] min-h-[797px] mx-auto bg-[#F8F7F4] py-20 px-8 md:px-16 lg:px-24 flex flex-col gap-[48px]"
         >
-          <div>
-            <h2
-              class="text-5xl font-black text-[#7C4DFF] uppercase tracking-tight mb-4"
-            >
-              Spaces That Work For You
-            </h2>
-            <p class="text-gray-600 text-lg">
-              Whether you're flying solo or bringing your team, we have the
-              space to match your energy.
-            </p>
-          </div>
+          <div
+            class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6"
+          >
+            <div>
+              <h2
+                class="text-5xl font-black text-[#7C4DFF] uppercase tracking-tight mb-4"
+              >
+                Spaces That Work For You
+              </h2>
+              <p class="text-gray-600 text-lg">
+                Whether you're flying solo or bringing your team, we have the
+                space to match your energy.
+              </p>
+            </div>
 
-          <div class="pb-8">
-            <button
-              class="border-2 border-[#7C4DFF] text-[#7C4DFF] px-8 py-3 rounded-xl font-bold mx-auto md:ml-auto hover:bg-[#7C4DFF] hover:text-white transition-all"
-            >
-              View All Spaces
-            </button>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
-            <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
-              <img
-                src="assests/blog-img/img-3.jpg"
-                alt="Shared Desk"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-center">
-              <h3 class="text-2xl font-bold text-[#2D2B38]">Shared Desk</h3>
-              <button class="text-[#7C4DFF] text-2xl">♡</button>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >10 pages Printing</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >1 Coffee</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >1 Bottle of Water</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >Free Wifi</span
-              >
-            </div>
-            <div class="flex justify-between items-center mt-4">
-              <div>
-                <p class="text-[#7C4DFF] text-2xl font-black">ETB 500</p>
-                <p class="text-gray-400 text-sm">Daily</p>
-              </div>
+            <div class="pb-8">
               <button
-                class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
+                class="border-2 border-[#7C4DFF] text-[#7C4DFF] px-8 py-3 rounded-xl font-bold mx-auto md:ml-auto hover:bg-[#7C4DFF] hover:text-white transition-all"
               >
-                Book Now <span>↗</span>
+                View All Spaces
               </button>
             </div>
           </div>
 
-          <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
-            <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
-              <img
-                src="assests/blog-img/img-2.jpg"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-center">
-              <h3 class="text-2xl font-bold text-[#2D2B38]">Private Office</h3>
-              <button class="text-[#7C4DFF] text-2xl">♡</button>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >Unlimited Printing</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >1 Coffee</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >Open Desk Access</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >Free Wifi</span
-              >
-            </div>
-            <div class="flex justify-between items-center mt-4">
-              <div>
-                <p class="text-[#7C4DFF] text-2xl font-black">ETB 1,000</p>
-                <p class="text-gray-400 text-sm">Daily</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src="assests/blog-img/img-3.jpg"
+                  alt="Shared Desk"
+                  class="w-full h-full object-cover"
+                />
               </div>
-              <button
-                class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
-              >
-                Book Now <span>↗</span>
-              </button>
+              <div class="flex justify-between items-center">
+                <h3 class="text-2xl font-bold text-[#2D2B38]">Shared Desk</h3>
+                <button class="text-[#7C4DFF] text-2xl">♡</button>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >10 pages Printing</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >1 Coffee</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >1 Bottle of Water</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >Free Wifi</span
+                >
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="text-[#7C4DFF] text-2xl font-black">ETB 500</p>
+                  <p class="text-gray-400 text-sm">Daily</p>
+                </div>
+                <button
+                  class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
+                >
+                  Book Now <span>↗</span>
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
-            <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
-              <img
-                src="assests/blog-img/img-1.jpg"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-center">
-              <h3 class="text-2xl font-bold text-[#2D2B38]">Dedicated Desk</h3>
-              <button class="text-[#7C4DFF] text-2xl">♡</button>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >10 pages Printing</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >1 Coffee</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >1 Bottle of Water</span
-              >
-              <span
-                class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
-                >Free Wifi</span
-              >
-            </div>
-            <div class="flex justify-between items-center mt-4">
-              <div>
-                <p class="text-[#7C4DFF] text-2xl font-black">ETB 800</p>
-                <p class="text-gray-400 text-sm">Daily</p>
+            <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src="assests/blog-img/img-2.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
               </div>
-              <button
-                class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
-              >
-                Book Now <span>↗</span>
-              </button>
+              <div class="flex justify-between items-center">
+                <h3 class="text-2xl font-bold text-[#2D2B38]">
+                  Private Office
+                </h3>
+                <button class="text-[#7C4DFF] text-2xl">♡</button>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >Unlimited Printing</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >1 Coffee</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >Open Desk Access</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >Free Wifi</span
+                >
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="text-[#7C4DFF] text-2xl font-black">ETB 1,000</p>
+                  <p class="text-gray-400 text-sm">Daily</p>
+                </div>
+                <button
+                  class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
+                >
+                  Book Now <span>↗</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src="assests/blog-img/img-1.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex justify-between items-center">
+                <h3 class="text-2xl font-bold text-[#2D2B38]">
+                  Dedicated Desk
+                </h3>
+                <button class="text-[#7C4DFF] text-2xl">♡</button>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >10 pages Printing</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >1 Coffee</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >1 Bottle of Water</span
+                >
+                <span
+                  class="bg-[#F0EDFF] text-[#7C4DFF] text-xs px-3 py-1 rounded-full font-medium"
+                  >Free Wifi</span
+                >
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="text-[#7C4DFF] text-2xl font-black">ETB 800</p>
+                  <p class="text-gray-400 text-sm">Daily</p>
+                </div>
+                <button
+                  class="bg-[#4A1D96] text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#3b1779]"
+                >
+                  Book Now <span>↗</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -683,324 +731,365 @@
       </section>
       <!------------------- pearks section ------------------------>
 
-      <section
-        class="bg-[#F8F7F4] py-20 px-4 md:px-12 flex flex-col items-center justify-center min-h-[600px] w-full max-w-[1440px] mx-auto"
-      >
-        <div class="max-w-4xl mx-auto text-center mb-12">
-          <h2
-            class="text-[#7C5CFC] text-5xl font-extrabold uppercase tracking-widest mb-4"
-          >
-            Perks You'll Enjoy
-          </h2>
-          <h3 class="text-[#2D2D2D] text-4xl font-extrabold mb-6">
-            Everything You Need, Already Included
-          </h3>
-          <p
-            class="text-gray-600 leading-relaxed max-w-2xl mx-auto text-sm md:text-base"
-          >
-            At Deskora, we've taken care of the little things so you can focus
-            on the big ideas. From productivity tools to daily comforts, our
-            workspaces come fully equipped to support your best work, every day.
-          </p>
-        </div>
-
-        <div class="w-full max-w-7xl">
-          <div class="flex flex-wrap justify-center gap-6 pb-8">
-            <div
-              class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
+      <section class="bg-[#F8F7F4] w-full">
+        <div
+          class="py-20 px-4 md:px-12 flex flex-col items-center justify-center min-h-[600px] w-full max-w-[1440px] mx-auto"
+        >
+          <div class="max-w-4xl mx-auto text-center mb-12">
+            <h2
+              class="text-[#7C5CFC] text-5xl font-extrabold uppercase tracking-widest mb-4"
             >
-              <div
-                class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
-              >
-                <i
-                  class="fa-solid fa-wifi text-[#7C5CFC] group-hover:text-white text-3xl"
-                ></i>
-              </div>
-              <span
-                class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
-              >
-                High-Speed<br />Wi-Fi
-              </span>
-            </div>
-
-            <div
-              class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
+              Perks You'll Enjoy
+            </h2>
+            <h3 class="text-[#2D2D2D] text-4xl font-extrabold mb-6">
+              Everything You Need, Already Included
+            </h3>
+            <p
+              class="text-gray-600 leading-relaxed max-w-2xl mx-auto text-sm md:text-base"
             >
-              <div
-                class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
-              >
-                <i
-                  class="fa-solid fa-mug-hot text-[#7C5CFC] group-hover:text-white text-3xl"
-                ></i>
-              </div>
-              <span
-                class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
-              >
-                Coffee &<br />Tea
-              </span>
-            </div>
+              At Deskora, we've taken care of the little things so you can focus
+              on the big ideas. From productivity tools to daily comforts, our
+              workspaces come fully equipped to support your best work, every
+              day.
+            </p>
+          </div>
 
-            <div
-              class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
-            >
+          <div class="w-full max-w-7xl">
+            <div class="flex flex-wrap justify-center gap-6 pb-8">
               <div
-                class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
               >
-                <i
-                  class="fa-solid fa-users-rectangle text-[#7C5CFC] group-hover:text-white text-3xl"
-                ></i>
+                <div
+                  class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                >
+                  <i
+                    class="fa-solid fa-wifi text-[#7C5CFC] group-hover:text-white text-3xl"
+                  ></i>
+                </div>
+                <span
+                  class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
+                >
+                  High-Speed<br />Wi-Fi
+                </span>
               </div>
-              <span
-                class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
-              >
-                Meeting<br />Rooms
-              </span>
-            </div>
 
-            <div
-              class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
-            >
               <div
-                class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
               >
-                <i
-                  class="fa-solid fa-vault text-[#7C5CFC] group-hover:text-white text-3xl"
-                ></i>
+                <div
+                  class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                >
+                  <i
+                    class="fa-solid fa-mug-hot text-[#7C5CFC] group-hover:text-white text-3xl"
+                  ></i>
+                </div>
+                <span
+                  class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
+                >
+                  Coffee &<br />Tea
+                </span>
               </div>
-              <span
-                class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
-              >
-                Lockers &<br />Storage
-              </span>
-            </div>
 
-            <div
-              class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
-            >
               <div
-                class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
               >
-                <i
-                  class="fa-solid fa-clock text-[#7C5CFC] group-hover:text-white text-3xl"
-                ></i>
+                <div
+                  class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                >
+                  <i
+                    class="fa-solid fa-users-rectangle text-[#7C5CFC] group-hover:text-white text-3xl"
+                  ></i>
+                </div>
+                <span
+                  class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
+                >
+                  Meeting<br />Rooms
+                </span>
               </div>
-              <span
-                class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
+
+              <div
+                class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
               >
-                24/7<br />Access
-              </span>
+                <div
+                  class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                >
+                  <i
+                    class="fa-solid fa-vault text-[#7C5CFC] group-hover:text-white text-3xl"
+                  ></i>
+                </div>
+                <span
+                  class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
+                >
+                  Lockers &<br />Storage
+                </span>
+              </div>
+
+              <div
+                class="group min-w-[180px] flex-1 md:flex-none bg-white rounded-2xl p-8 flex flex-col items-center shadow-sm text-center transition-all duration-300 hover:bg-[#7C4DFF] hover:scale-[1.05] cursor-pointer"
+              >
+                <div
+                  class="bg-[#E5DEFF] group-hover:bg-white/20 w-16 h-16 flex items-center justify-center rounded-xl mb-6 transition-colors"
+                >
+                  <i
+                    class="fa-solid fa-clock text-[#7C5CFC] group-hover:text-white text-3xl"
+                  ></i>
+                </div>
+                <span
+                  class="text-[#2D2D2D] group-hover:text-white font-bold text-lg leading-tight transition-colors"
+                >
+                  24/7<br />Access
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!---------------------------- testimonials section 2 ---------------------------------------->
       <section
-        class="relative w-full max-w-[1440px] min-h-[700px] flex flex-col items-center justify-center overflow-hidden mx-auto py-16 px-4 md:px-12"
+        class="w-full"
         style="
           background: linear-gradient(116.12deg, #7c4dff 17.1%, #fff7d1 82.9%);
         "
       >
         <div
-          class="absolute left-10 md:left-36 top-10 opacity-10 pointer-events-none"
+          class="relative w-full max-w-[1440px] min-h-[700px] flex flex-col items-center justify-center overflow-hidden mx-auto py-16 px-4 md:px-12"
         >
-          <i
-            class="fa-solid fa-quote-left text-[12rem] md:text-[22rem] text-black"
-          ></i>
-        </div>
-
-        <h2
-          class="relative z-10 text-[#FFF7D1] text-4xl md:text-6xl font-black uppercase mb-10 text-center tracking-tight"
-        >
-          Testimonials
-        </h2>
-
-        <div
-          class="flex items-center justify-center w-full max-w-5xl gap-4 md:gap-8"
-        >
-          <button
-            class="hidden md:flex w-16 h-16 items-center justify-center rounded-full hover:bg-white/30 cursor-pointer bg-black/10 shrink-0 transition-all"
-          >
-            <i class="fa-solid fa-chevron-left text-white text-xl"></i>
-          </button>
-
           <div
-            class="w-full max-w-[440px] min-h-[500px] bg-black/10 backdrop-blur-sm rounded-2xl flex flex-col items-center text-center py-10 px-6 md:py-12 md:px-8 border border-white/10 shadow-2xl"
+            class="absolute left-10 md:left-36 top-10 opacity-10 pointer-events-none"
           >
-            <div
-              class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 shadow-xl"
-            >
-              <img
-                src="assests/test2-img/img.jpg"
-                alt="Leul Mekonen"
-                class="w-full h-full object-cover"
-              />
-            </div>
-
-            <h4 class="text-white text-2xl font-bold mb-1">Leul Mekonen</h4>
-            <p class="text-white/80 font-medium mb-8">Freelancer</p>
-
-            <p class="text-white text-base md:text-lg leading-relaxed italic">
-              "Workora completely changed how I work. I used to bounce between
-              cafés, but now I have a space that feels like mine with better
-              coffee and zero distractions."
-            </p>
+            <i
+              class="fa-solid fa-quote-left text-[12rem] md:text-[22rem] text-black"
+            ></i>
           </div>
 
-          <button
-            class="hidden md:flex w-16 h-16 items-center justify-center rounded-full hover:bg-white/30 cursor-pointer bg-black/10 shrink-0 transition-all"
+          <h2
+            class="relative z-10 text-[#FFF7D1] text-4xl md:text-6xl font-black uppercase mb-10 text-center tracking-tight"
           >
-            <i class="fa-solid fa-chevron-right text-white text-xl"></i>
-          </button>
-        </div>
+            Testimonials
+          </h2>
 
-        <div class="flex md:hidden gap-6 mt-10">
-          <button
-            class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 border border-white/20 active:scale-95"
+          <div
+            class="flex items-center justify-center w-full max-w-5xl gap-4 md:gap-8"
           >
-            <i class="fa-solid fa-chevron-left text-white"></i>
-          </button>
-          <button
-            class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 border border-white/20 active:scale-95"
-          >
-            <i class="fa-solid fa-chevron-right text-white"></i>
-          </button>
+            <button
+              class="hidden md:flex w-16 h-16 items-center justify-center rounded-full hover:bg-white/30 cursor-pointer bg-black/10 shrink-0 transition-all"
+            >
+              <i class="fa-solid fa-chevron-left text-white text-xl"></i>
+            </button>
+
+            <div
+              class="w-full max-w-[440px] min-h-[500px] bg-black/10 backdrop-blur-sm rounded-2xl flex flex-col items-center text-center py-10 px-6 md:py-12 md:px-8 border border-white/10 shadow-2xl"
+            >
+              <div
+                class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 shadow-xl"
+              >
+                <img
+                  src="assests/test2-img/img.jpg"
+                  alt="Leul Mekonen"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <h4 class="text-white text-2xl font-bold mb-1">Leul Mekonen</h4>
+              <p class="text-white/80 font-medium mb-8">Freelancer</p>
+
+              <p class="text-white text-base md:text-lg leading-relaxed italic">
+                "Workora completely changed how I work. I used to bounce between
+                cafés, but now I have a space that feels like mine with better
+                coffee and zero distractions."
+              </p>
+            </div>
+
+            <button
+              class="hidden md:flex w-16 h-16 items-center justify-center rounded-full hover:bg-white/30 cursor-pointer bg-black/10 shrink-0 transition-all"
+            >
+              <i class="fa-solid fa-chevron-right text-white text-xl"></i>
+            </button>
+          </div>
+
+          <div class="flex md:hidden gap-6 mt-10">
+            <button
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 border border-white/20 active:scale-95"
+            >
+              <i class="fa-solid fa-chevron-left text-white"></i>
+            </button>
+            <button
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 border border-white/20 active:scale-95"
+            >
+              <i class="fa-solid fa-chevron-right text-white"></i>
+            </button>
+          </div>
         </div>
       </section>
       <!------------------------- blog-2 section ---------------------------------->
-      <section
-        class="w-full max-w-[1440px] min-h-[803px] mx-auto py-12 px-4 flex flex-col gap-[48px] bg-white"
-      >
-        <div class="w-full">
-          <h2
-            class="text-[#7C4DFF] text-5xl font-black uppercase tracking-widest"
-          >
-            Blogs
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="flex flex-col cursor-pointer">
-            <div class="overflow-hidden rounded-sm mb-[20px]">
-              <img
-                src="assests/blog2-img/img (2).jpg"
-                alt=""
-                class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div class="flex justify-between text-gray-400 text-sm mb-3">
-              <span>by Admin</span>
-              <span>July 27, 2025</span>
-            </div>
-            <h3 class="text-[#7C4DFF] text-2xl font-bold leading-tight mb-4">
-              Why Coworking Works: 5 Surprising Productivity Benefits
-            </h3>
-            <p class="text-gray-500 line-clamp-2 mb-6">
-              From better focus to unexpected collaborations, coworking spaces
-              are changing how we work...
-            </p>
-            <a
-              href="#"
-              class="px-4 py-2 w-fit rounded-sm inline-flex items-center gap-2 border border-[#7C4DFF] text-[#7C4DFF] font-bold hover:bg-[#7C4DFF] hover:text-white"
+      <section class="w-full bg-white">
+        <div
+          class="w-full max-w-[1440px] min-h-[803px] mx-auto py-12 px-4 flex flex-col gap-[48px]"
+        >
+          <div class="w-full">
+            <h2
+              class="text-[#7C4DFF] text-5xl font-black uppercase tracking-widest"
             >
-              Read More
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+              Blogs
+            </h2>
           </div>
 
-          <div class="flex flex-col cursor-pointer">
-            <div class="overflow-hidden rounded-sm mb-[20px]">
-              <img
-                src="assests/blog2-img/img (3).jpg"
-                alt=""
-                class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col cursor-pointer">
+              <div class="overflow-hidden rounded-sm mb-[20px]">
+                <img
+                  src="assests/blog2-img/img (2).jpg"
+                  alt=""
+                  class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="flex justify-between text-gray-400 text-sm mb-3">
+                <span>by Admin</span>
+                <span>July 27, 2025</span>
+              </div>
+              <h3 class="text-[#7C4DFF] text-2xl font-bold leading-tight mb-4">
+                Why Coworking Works: 5 Surprising Productivity Benefits
+              </h3>
+              <p class="text-gray-500 line-clamp-2 mb-6">
+                From better focus to unexpected collaborations, coworking spaces
+                are changing how we work...
+              </p>
+              <a
+                href="#"
+                class="px-4 py-2 w-fit rounded-sm inline-flex items-center gap-2 border border-[#7C4DFF] text-[#7C4DFF] font-bold hover:bg-[#7C4DFF] hover:text-white"
+              >
+                Read More
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
-            <div class="flex justify-between text-gray-400 text-sm mb-3">
-              <span>by Admin</span>
-              <span>July 27, 2025</span>
-            </div>
-            <h3 class="text-[#7C4DFF] text-2xl font-bold leading-tight mb-4">
-              Designing for Focus: What Makes a Workspace Truly Inspiring?
-            </h3>
-            <p class="text-gray-500 line-clamp-2 mb-6">
-              Lighting, layout, energy there's more to a great workspace than
-              desks and chairs. In this post...
-            </p>
-            <a
-              href="#"
-              class="px-4 py-2 w-fit rounded-sm inline-flex items-center gap-2 border border-[#7C4DFF] text-[#7C4DFF] font-bold hover:bg-[#7C4DFF] hover:text-white"
-            >
-              Read More
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
 
-          <div class="flex flex-col cursor-pointer">
-            <div class="overflow-hidden rounded-sm mb-[20px]">
-              <img
-                src="assests/blog2-img/img (1).jpg"
-                alt=""
-                class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+            <div class="flex flex-col cursor-pointer">
+              <div class="overflow-hidden rounded-sm mb-[20px]">
+                <img
+                  src="assests/blog2-img/img (3).jpg"
+                  alt=""
+                  class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="flex justify-between text-gray-400 text-sm mb-3">
+                <span>by Admin</span>
+                <span>July 27, 2025</span>
+              </div>
+              <h3 class="text-[#7C4DFF] text-2xl font-bold leading-tight mb-4">
+                Designing for Focus: What Makes a Workspace Truly Inspiring?
+              </h3>
+              <p class="text-gray-500 line-clamp-2 mb-6">
+                Lighting, layout, energy there's more to a great workspace than
+                desks and chairs. In this post...
+              </p>
+              <a
+                href="#"
+                class="px-4 py-2 w-fit rounded-sm inline-flex items-center gap-2 border border-[#7C4DFF] text-[#7C4DFF] font-bold hover:bg-[#7C4DFF] hover:text-white"
+              >
+                Read More
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
-            <div class="flex justify-between text-gray-400 text-sm mb-3">
-              <span>by Admin</span>
-              <span>July 27, 2025</span>
+
+            <div class="flex flex-col cursor-pointer">
+              <div class="overflow-hidden rounded-sm mb-[20px]">
+                <img
+                  src="assests/blog2-img/img (1).jpg"
+                  alt=""
+                  class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="flex justify-between text-gray-400 text-sm mb-3">
+                <span>by Admin</span>
+                <span>July 27, 2025</span>
+              </div>
+              <h3 class="text-[#7C4DFF] text-2xl font-bold leading-tight mb-4">
+                Membership vs. Day Pass: Which Plan Fits Your Work Style?
+              </h3>
+              <p class="text-gray-500 line-clamp-2 mb-6">
+                Whether you're a digital nomad, a growing startup, or a remote
+                worker craving community, we break...
+              </p>
+              <a
+                href="#"
+                class="px-4 py-2 w-fit rounded-sm inline-flex items-center gap-2 border border-[#7C4DFF] text-[#7C4DFF] font-bold hover:bg-[#7C4DFF] hover:text-white"
+              >
+                Read More
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
-            <h3 class="text-[#7C4DFF] text-2xl font-bold leading-tight mb-4">
-              Membership vs. Day Pass: Which Plan Fits Your Work Style?
-            </h3>
-            <p class="text-gray-500 line-clamp-2 mb-6">
-              Whether you're a digital nomad, a growing startup, or a remote
-              worker craving community, we break...
-            </p>
-            <a
-              href="#"
-              class="px-4 py-2 w-fit rounded-sm inline-flex items-center gap-2 border border-[#7C4DFF] text-[#7C4DFF] font-bold hover:bg-[#7C4DFF] hover:text-white"
-            >
-              Read More
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
           </div>
         </div>
       </section>
       <!-------------------- pearks section ----------------------->
-      <section
-        class="flex flex-col md:flex-row w-full max-w-[1440px] min-h-[266px] items-center justify-between px-6 py-12 md:px-20 bg-[linear-gradient(116.12deg,_#7C4DFF_17.1%,_#FFF7D1_82.9%)] mx-auto gap-8 md:gap-4"
+       <section
+
+        class="bg-[linear-gradient(116.12deg,_#7C4DFF_17.1%,_#FFF7D1_82.9%)]"
+
       >
-        <div class="max-w-2xl text-white text-center md:text-left">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            Ready to Elevate Your Workday?
-          </h2>
-          <p class="text-base md:text-lg opacity-90 leading-relaxed">
-            Discover your next favorite place to focus, connect, and create.
-            Whether you're freelancing solo or scaling a team, Workora has a
-            space just for you.
-          </p>
+
+        <div
+
+          class="flex flex-col md:flex-row w-full max-w-[1440px] min-h-[266px] items-center justify-between px-6 py-12 md:px-20 bg-[linear-gradient(116.12deg,_#7C4DFF_17.1%,_#FFF7D1_82.9%)] mx-auto gap-8 md:gap-4"
+
+        >
+
+          <div class="max-w-2xl text-white text-center md:text-left">
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+
+              Ready to Elevate Your Workday?
+
+            </h2>
+
+            <p class="text-base md:text-lg opacity-90 leading-relaxed">
+
+              Discover your next favorite place to focus, connect, and create.
+
+              Whether you're freelancing solo or scaling a team, Workora has a
+
+              space just for you.
+
+            </p>
+
+          </div>
+
+
+
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+
+            <button
+
+              class="border border-[#7C4DFF] text-[#4A148C] px-8 py-3 rounded-lg font-semibold transition-all hover:bg-[#7C4DFF] hover:text-white cursor-pointer w-full sm:w-auto whitespace-nowrap"
+
+            >
+
+              Book Your Space
+
+            </button>
+
+            <button
+
+              class="border border-[#7C4DFF] text-[#4A148C] px-8 py-3 rounded-lg font-semibold hover:bg-[#7C4DFF] hover:text-white transition-all cursor-pointer w-full sm:w-auto whitespace-nowrap"
+
+            >
+
+              Contact US
+
+            </button>
+
+          </div>
+
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <button
-            class="border border-[#7C4DFF] text-[#4A148C] px-8 py-3 rounded-lg font-semibold transition-all hover:bg-[#7C4DFF] hover:text-white cursor-pointer w-full sm:w-auto whitespace-nowrap"
-          >
-            Book Your Space
-          </button>
-          <button
-            class="border border-[#7C4DFF] text-[#4A148C] px-8 py-3 rounded-lg font-semibold hover:bg-[#7C4DFF] hover:text-white transition-all cursor-pointer w-full sm:w-auto whitespace-nowrap"
-          >
-            Contact US
-          </button>
-        </div>
       </section>
       <!---------------------------------------------- footer section ----------------------------------------------------------->
-      <footer
-        class="w-full max-w-[1440px] bg-[#2D2B38] text-white py-16 px-6 md:px-16 lg:px-24 mx-auto"
-      >
+      <footer class="w-full bg-[#2D2B38]">
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 max-w-[1440px] text-white py-16 px-6 md:px-16 lg:px-24 mx-auto"
         >
           <div
-            class="flex flex-col gap-4 text-center sm:text-left items-center "
+            class="flex flex-col gap-4 sm:text-center lg:text-left items-center sm:items-start"
           >
             <h2 class="text-4xl font-bold tracking-tight text-[#7C4DFF]">
               WORKORA
@@ -1152,5 +1241,6 @@
         </div>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
